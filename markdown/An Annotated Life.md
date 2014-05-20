@@ -50,7 +50,7 @@ Keywords:
 
 > I’d like the Hobonichi Techo to be a fishing net to catch all the things you think and feel during your unnameable times. Of course you can use the techo as a scheduler, but there are already other tools you can use for that. I get the feeling there’s never been a container to keep things that surface during unnameable times, unimportant things that stick with you, or things that resonate with you when you don’t know why.
 
-~ [Shigesato Itoi][4]
+~ [Shigesato Itoi][3]
 
 ### Writing a Book Meant to Be Read [sect-writingbook]
 
