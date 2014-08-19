@@ -139,7 +139,7 @@ Keywords:
 #### Visual Hodgepodge [sect-hodge]
 
 * I'm a visual learner.
-* I love to doodle (badly).e
+* I love to doodle (badly).
 * Every day I have a blank page to create whatever I want.[^1]
 	
 
