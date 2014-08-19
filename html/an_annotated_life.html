@@ -1,51 +1,52 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>A Notebook for Living</title>
+  <title>An Annotated Life</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+/*
+ * This document has been created with Marked.app <http://markedapp.com>.
+ * Copyright 2011 Brett Terpstra
+ * ---------------------------------------------------------------------------
+ * Please leave this notice in place, along with any additional credits below.
+ *
+ * Byword.css theme is based on Byword.app <http://bywordapp.com>
+ * Authors: @brunodecarvalho, @jpedroso, @rcabaco
+ * Copyright 2011 Metaclassy, Lda. <http://metaclassy.com>
+ */
+ 
+html {
+	font-size: 62.5%; /* base font-size: 10px */
+}
+
 body {
     background-color: #f2f2f2;
     color: #3c3c3c;
-    padding-right: 25px;
-    padding-left: 25px;
-    padding-bottom:10px;
-
+    
     /* Change font size below */
-    font-size: 14px;
-    line-height: 1.4em;
+	font-size: 1.7em; 
+	line-height: 1.4em;
+	
+	/* Change font below */
 
-    /* Change font below */
-
-    /* Sans-serif fonts */
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-
+	/* Sans-serif fonts */	
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	
+	/* Serif fonts */
+	/*
+	font-family: "Cochin", "Baskerville", "Georgia", serif;
+	-webkit-font-smoothing: subpixel-antialiased;
+	*/
+	
+	/* Monospaced fonts */
+	/*
+	font-family: "Courier New", Menlo, Monaco, mono;
+	-webkit-font-smoothing: antialiased;
+	*/
 }
-
-@font-face {
-                font-family: 'mplus-1m-regular';
-                src: url('https://dl.dropboxusercontent.com/u/5591113/font/mplus-1m-regular.eot');
-                src: url('https://dl.dropboxusercontent.com/u/5591113/font/mplus-1m-regular.eot?#iefix') format('embedded-opentype'),
-                     url('https://dl.dropboxusercontent.com/u/5591113/font/mplus-1m-regular.woff') format('woff'),
-                     url('https://dl.dropboxusercontent.com/u/5591113/font/mplus-1m-regular.ttf') format('truetype'),
-                     url('https://dl.dropboxusercontent.com/u/5591113/font/mplus-1m-regular.svg#mplus-1m-regular') format('svg');
-                font-weight: normal;
-                font-style: normal;
-            }
-@font-face {
-                font-family: 'MetaBook-Roman';
-                src: url('https://dl.dropboxusercontent.com/u/5591113/font/mtbkro.eot');
-                src: url('https://dl.dropboxusercontent.com/u/5591113/font/mtbkro.eot?#iefix') format('embedded-opentype'),
-                         url('https://dl.dropboxusercontent.com/u/5591113/font/mtbkro.woff') format('woff'),
-                         url('https://dl.dropboxusercontent.com/u/5591113/font/mtbkro.ttf') format('truetype'),
-                         url('https://dl.dropboxusercontent.com/u/5591113/font/mtbkro.svg#mtbkro') format('svg');
-                font-weight: normal;
-                font-style: normal;
-        }
-
 a {
     color: #308bd8;
     text-decoration:none;
@@ -54,7 +55,6 @@ a:hover {
     text-decoration: underline;
 }
 /* headings */
-h1, h2, h3, h4 {font-family: "MetaBook-Roman";}
 h1, h2 {
     line-height:1.2em;
     margin-top:32px;
@@ -65,27 +65,12 @@ h1:first-child {
 }
 h3, h4, h5, h6 {
     margin-top:12px;
-    margin-bottom:12px;
+    margin-bottom:0;
 }
 h5, h6 {
     font-size:0.9em;
     line-height:1.0em;
 }
-
-//h2 { border-bottom:1px solid #dddddd;}
-h2 { border-bottom: medium double #ddd; margin-top:55px;}
-h3 { border-bottom:1px solid #dddddd; margin-top:35px;}
-h1 + h2 {margin-top:35px;}
-h1 + p {margin-top:45px;}
-
-/* pad H3 Block that immediatly follow an H2 block */
-h2 + h3 {margin-top:25px;}
-
-
-/* Prevents Header underline after a horizontal rule */
-//hr + h2 {border-bottom: none;}
-
-
 /* end of headings */
 p {
     margin:0 0 24px 0;
@@ -93,12 +78,6 @@ p {
 p:last-child {
     margin:0;
 }
-
-//img {border: 4px solid #dedede;}
-
-// Used in Due Workflow
-//#wrapper img.frame {padding:5px; background:white; border:1px solid #ccc;}
-
 #wrapper hr {
     width: 100%;
     margin: 3em auto;
@@ -126,21 +105,14 @@ ul li {
     margin-bottom:8px;
     margin-left:16px;
 }
-ol li {
-    margin-bottom:8px;
-}
-
 ol:last-child, ul:last-child {
     margin:0;
 }
 li > ol, li > ul {
     padding-left:12px;
-    padding-top:5px;
 }
-
-
 dl {
-    margin-bottom:30px;
+    margin-bottom:24px;
 }
 dl dt {
     font-weight:bold;
@@ -150,35 +122,9 @@ dl dd {
     margin-left:0;
     margin-bottom:12px;
 }
-/*
 dl dd:last-child, dl:last-child {
     margin-bottom:0;
 }
-
-
-dl {    float: left;
-    width: 800px;
-    margin: 1em 0;
-    padding: 0;
-margin-bottom: 30px;
-}
-dt {    clear: left;
-    float: left;
-    width: 200px;
-    margin: 0;
-    padding: 5px;
-    font-weight: bold;
-}
-dd {
-    float: left;
-    width: 500px;
-    margin: 0;
-    padding: 5px;
-}
-*/
-dl + h2, h1, h3, h4, p, ul, hr {clear:both;}
-h2 + dl { margin-bottom: 45px;}
-
 /* end of lists */
 pre {
     white-space: pre-wrap;
@@ -191,9 +137,8 @@ pre {
     border: 1px solid #ddd;
 }
 code {
-font-family: 'mplus-1m-regular';
     white-space: nowrap;
-    font-size: 14px;
+    font-size: 1.1em;
     padding: 2px;
     -webkit-border-radius: 3px;
     background-color: #eee;
@@ -215,12 +160,9 @@ blockquote {
     color: #777;
 }
 table {
-   margin-left: auto;
-   margin-right: auto;
-    margin-top:20px;
-    //margin-left:50px;
-    //margin-top: 24px;
-    //margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
     border-bottom: 1px solid #ddd;
     border-right: 1px solid #ddd;
     border-spacing: 0;
@@ -238,8 +180,6 @@ table td {
     border-top: 1px solid #ddd;
     border-left: 1px solid #ddd;
 }
-
-tr:nth-child(even){ background-color:#eee; }
 caption {
     font-size: 1.2em;
     font-weight: bold;
@@ -248,9 +188,9 @@ caption {
 figure {
     display: block;
     text-align: center;
-    margin-bottom: 30px;
 }
 #wrapper img {
+    border: none;
     display: block;
     margin: 1em auto;
     max-width: 100%;
@@ -264,12 +204,7 @@ mark {
     padding:1px 3px;
 }
 
-#footer {
-    border-top:medium double #ddd;
-    font-size:11px;
-    padding-top:5px;
-    margin-top:15px;">Outlines Are Cool<span style="float:right;
-}
+
 /* classes */
 
 .markdowncitation {
@@ -298,47 +233,90 @@ mark {
     margin: -40px;
 }
 
-a.header-right {
-    float:right;
-    font-size:16px;
-    margin-bottom:15px;
+@media screen {
+	.inverted, .inverted #wrapper {
+	    background-color: #1a1a1a !important;
+	    color: #bebebe !important;
+	    
+	   	/* SANS-SERIF */	
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+		-webkit-font-smoothing: antialiased !important;
+		
+		/* SERIF */
+		/*
+		font-family: "Cochin", "Baskerville", "Georgia", serif !important;
+		-webkit-font-smoothing: subpixel-antialiased !important;
+		*/
+		/* MONO */
+		/*
+		font-family: "Courier", mono !important;
+		-webkit-font-smoothing: antialiased !important;
+		*/
+	}
+	.inverted a {
+	    color: #308bd8 !important;
+	}
+	.inverted hr {
+	    color: #666 !important;
+	    border: 0;
+	    background-color: #666 !important;
+	    -webkit-box-shadow: none !important;
+	}
+	.inverted pre {
+	    background-color: #222 !important;
+	    border-color: #3c3c3c !important;
+	}
+	.inverted code {
+	    background-color: #222 !important;
+	    border-color: #3c3c3c !important;
+	}
+	.inverted blockquote {
+	    border-color: #333 !important;
+	    color: #999 !important;
+	}
+	.inverted table {
+	    border-color: #3c3c3c !important;
+	}
+	.inverted table th {
+	    background-color: #222 !important;
+	    border-color: #3c3c3c !important;
+	}
+	.inverted table td {
+	    border-color: #3c3c3c !important;
+	}
+	.inverted mark {
+	    background: #bc990b !important;
+	    color:#000 !important;
+	}
+    .inverted .shadow { -webkit-box-shadow: 0 2px 4px #000 !important; }
+	#wrapper {
+        background: transparent;
+        margin: 40px;
+    }
 }
 
-a.header-left {
-    float:left;
-    font-size:16px;
+/* Printing support */
+@media print {
+	body {
+		overflow: auto;
+	}
+    img, pre, blockquote, table, figure {
+        page-break-inside: avoid;
+    }
+    pre, code {
+		border: none !important;
+	}
+	#wrapper {
+        background: #fff;
+        position: relative;
+        text-indent: 0px;
+        padding: 10px;
+        font-size:85%;
+    }
+    .footnotes {
+        page-break-before: always;
+    }
 }
-
-h1 {margin-top: 0;}
-
-
-hr {
-    border:0;
-    margin-top:40px;
-    margin-bottom:30px;
-    // border-bottom:1px solid #dddddd;
-}
-
-
-hr {
-    padding: 0;
-    border: none;
-    border-top: medium double #ddd;
-    color: #ddd;
-    text-align: center;
-    margin-top:25px;
-    margin-bottom:15px;
-}
-
-
-hr + p {margin:0px; padding:0px;}
-
-
-
-hr + h2 {margin-top:0;}
-hr + h3 {margin-top:0; padding-top:3px;}
-blockquote + hr {margin: 25px 15% 25px 15%}
-
 </style>
 
 </head>
@@ -346,344 +324,369 @@ blockquote + hr {margin: 25px 15% 25px 15%}
   <div id="wrapper">
       <h1>An Annotated Life</h1>
 
-      <ul>
-      <li><a href="#sect-overview">Overview</a>.</li>
-      <li><a href="#sect-hobo">Hobonichi Planner: One of My Favorite Things</a>.
+<ul>
+<li><a href="#sect-overview">Overview</a>.</li>
+<li><a href="#sect-hobo">Hobonichi Planner: One of My Favorite Things</a>.
 
-      <ul>
-      <li><a href="#sect-writingbook">Writing a Book Meant to Be Read</a>.</li>
-      <li><a href="#sect-dig">Digital Files Are Convenient Not Cherished</a>.</li>
-      <li><a href="#sect-usecase">Use Cases</a>.</li>
-      <li><a href="#sect-why">Why</a>.
+<ul>
+<li><a href="#sect-writingbook">Writing a Book Meant to Be Read</a>.</li>
+<li><a href="#sect-dig">Digital Files Are Convenient Not Cherished</a>.</li>
+<li><a href="#sect-usecase">Use Cases</a>.</li>
+<li><a href="#sect-why">Why</a>.
 
-      <ul>
-      <li><a href="#sect-emph">Emphasis on Fun and Love</a>.</li>
-      <li><a href="#sect-hodge">Visual Hodgepodge</a>.</li>
-      <li><a href="#sect-teach">Teaching by Example</a>.</li>
-      </ul></li>
-      <li><a href="#sect-how">How / Structure</a>.
+<ul>
+<li><a href="#sect-emph">Emphasis on Fun and Love</a>.</li>
+<li><a href="#sect-hodge">Visual Hodgepodge</a>.</li>
+<li><a href="#sect-teach">Teaching by Example</a>.</li>
+</ul></li>
+<li><a href="#sect-how">How / Structure</a>.
 
-      <ul>
-      <li><a href="#section-free">Freedom</a>.</li>
-      </ul></li>
-      </ul></li>
-      <li><a href="#section-taskbook">Taskbook</a>.</li>
-      <li><a href="#section-products">Products</a>.</li>
-      <li><a href="#sect-resources">Resources</a>.</li>
-      </ul>
-
-      <h2 id="sect-overview">Overview</h2>
-
-      <ul>
-      <li>Changes to Notebook Workflow and Notes.
-
-      <ul>
-      <li>Changes are gear-based.</li>
-      <li>All concepts still stand (prerequisite).</li>
-      </ul></li>
-      <li><em>Creative Instincts</em> and fun.</li>
-      <li>Generational thinking.</li>
-      </ul>
-
-      <h2 id="sect-hobo">Hobonichi Planner: One of My Favorite Things</h2>
-
-      <blockquote>
-      <p>I want people to think of Planners not so much as something you write in, as something you read. </p>
-      </blockquote>
-
-      <p>~ <a href="http://pingmag.jp/2013/08/30/hobonichi-planner/">Shigesato Itoi</a></p>
-
-      <blockquote>
-      <p>But really I want people to do whatever they like with it. Not just times and dates. Write down the thing you like most in the world today, you know? It’s not a duty. The handbooks given out in Japanese companies up till know were basically on the restriction side of things. “Meet so-and-so at such-and-such time.” But I want the Hobonichi Planner to be on the fun side.</p>
-      </blockquote>
-
-      <p>~ <a href="http://pingmag.jp/2013/08/30/hobonichi-planner/">Shigesato Itoi</a></p>
-
-      <blockquote>
-      <p>There are still special joys you can only get with a physical journal like the Techo, however, like searching for the perfect pen to pair with your planner, or getting to mark in the margins that a sports team you follow won, or using a butt-based scoring system to rate your day, or affixing colorful cat stickers next to your appointments, or writing out the name of your lover or crush over and over during your daydreams, or making quick sketches of your meals, or slowly building a row of books on your shelf to create a multi-volume chronicle of your life</p>
-      </blockquote>
-
-      <p>~ <a href="http://tinycartridge.com/post/43010325781/tiny-review-hobonichi-techo-2013-it-might-seem">Eric Caoili</a></p>
-
-      <blockquote>
-      <p>When people are alone, they have this hazy, blank period of time they can’t put a name to.</p>
-
-      <p>The nameless feelings experienced during those nameless times make up a major element of a person. And one day, like a bubble surfacing in water, something will emerge in the form of words. I hope the Hobonichi Techo can serve as a means to keep those words.</p>
-
-      <p>I’d like the Hobonichi Techo to be a fishing net to catch all the things you think and feel during your unnameable times. Of course you can use the techo as a scheduler, but there are already other tools you can use for that. I get the feeling there’s never been a container to keep things that surface during unnameable times, unimportant things that stick with you, or things that resonate with you when you don’t know why.</p>
-      </blockquote>
-
-      <p>~ <a href="http://hobonichilove.tumblr.com/post/40632283467/shigesato-itoi-on-the-hobonichi-techo-its-all">Shigesato Itoi</a></p>
-
-      <h3 id="sect-writingbook">Writing a Book Meant to Be Read</h3>
-
-      <ul>
-      <li>I&#8217;m the father of a two-year-old son.</li>
-      <li>I&#8217;m turning 40 this year.</li>
-      <li>I want to write my story for the both of us.</li>
-      </ul>
-
-      <h4 id="sect-dig">Digital Files Are Convenient Not Cherished</h4>
-
-      <ul>
-      <li>The only feature digital provides is search.</li>
-      <li>There will never be an app that is capable of outputting anything my son will love because it belonged to his father.
-
-      <ul>
-      <li>What sense of discovery is there in opening a PDF file?
-
-      <ul>
-      <li>Not the same as finding a box, or a key to a safe deposit box.</li>
-      </ul></li>
-      <li>Anyone could have typed those words.</li>
-      <li>Nothing says <em>I was here</em> like the messes we leave behind.</li>
-      </ul></li>
-      <li>Apps focus on capture instead of reflection.
-
-      <ul>
-      <li>Focusing on quick entry switches my mindset to <em>terse</em> and <em>logging</em> and <em>just the facts</em>.</li>
-      <li>My experience: maybe five out of 1100+ entries are interesting.</li>
-      </ul></li>
-      </ul>
-
-      <h3 id="sect-usecase">What</h3>
-
-      <h4>Family</h4>
-
-      <ul>
-      <li>My Wife.
-
-      <ul>
-      <li>Snapshots from the moments I realize just how lucky I am.</li>
-      <li>Date nights.
-
-      <ul>
-      <li>Ticket stubs.</li>
-      </ul></li>
-      <li>Little notes I receive.</li>
-      </ul></li>
-      <li>My Boy.
-
-      <ul>
-      <li>Awesome things he says.</li>
-      <li>Awesome things he does.</li>
-      <li>Awesome things we do together.</li>
-      <li>Little pictures he makes for me.</li>
-      <li>Stickers he gives me.</li>
-      <li>Tags/packaging from special gifts I give him.</li>
-      </ul></li>
-      </ul>
-
-      <h4>Milestones</h4>
-
-      <ul>
-      <li>My Boy.</li>
-      <li>Mine.</li>
-      </ul>
-
-      <h4>Me</h4>
-
-      <ul>
-      <li><a href="https://medium.com/the-writers-room/8d6e7df7ae58"><strong>Sparks</strong></a>.</li>
-      <li>Nota Bene.
-
-      <ul>
-      <li><a href="http://twitter.com/korzdorfer/statuses/370191493215969281">Numbered</a>.</li>
-      <li><a href="http://www.amazon.com/Waste-Books-York-Review-Classics/dp/0940322501">The Waste Books</a>.</li>
-      </ul></li>
-      <li>Problem Solving.
-
-      <ul>
-      <li>The productivity acolytes have it wrong: You&#8217;re not what you make–You&#8217;re the problems you solve.</li>
-      <li>My boy doesn&#8217;t need to know the details of my work, but recording how I solved a difficult problem might prove educational.</li>
-      </ul></li>
-      <li>Mistakes.
-
-      <ul>
-      <li>When I mistreated someone.</li>
-      <li>Parenting failures.</li>
-      <li>When I didn&#8217;t think something through.</li>
-      </ul></li>
-      <li>Thoughts on:
-
-      <ul>
-      <li>Books I&#8217;m reading.</li>
-      <li>Games I&#8217;m playing.</li>
-      <li>Movies I watched.</li>
-      <li>Hockey games I watched.</li>
-      <li>Shows I watched.</li>
-      </ul></li>
-      <li>Collectables.
-
-      <ul>
-      <li>Quotes.</li>
-      </ul></li>
-      </ul>
-
-      <h3 id="sect-why">Why</h3>
-
-      <h4 id="sect-emph">Emphasis on Fun and Love</h4>
-
-      <ul>
-      <li>When I look back on my notebooks, I want to spend my time with the best version of me.</li>
-      <li>When I&#8217;m writing the book, I want to have fun.
-
-      <ul>
-      <li>Stamps, stickers, and taping in small trophies is satisfying and ensures I will review my notes in the future.</li>
-      </ul></li>
-      <li>If I notice a sequence of barren or text laden pages, it&#8217;s obvious I&#8217;m starting to obsess about work and need to focus on living and spending time with my family.</li>
-      <li><em>Problem Solving</em> and <em>Troubleshooting</em> notes are brief and the date points me to detailed information if need be.
-
-      <ul>
-      <li>I keep detailed work notes in a dedicated wiki / notebook.</li>
-      </ul></li>
-      </ul>
-
-      <h4 id="sect-hodge">Visual Hodgepodge</h4>
-
-      <ul>
-      <li>I&#8217;m a visual learner.</li>
-      <li>I love to doodle (badly).</li>
-      <li>Every day I have a blank page to create whatever I want.<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a></li>
-      </ul>
-
-      <h4 id="sect-teach">Teaching by Example</h4>
-
-      <ul>
-      <li>I never learned how to draw.
-
-      <ul>
-      <li>I&#8217;ve always wanted to.</li>
-      </ul></li>
-      <li>I include a small sketch / doodle on every page.
-
-      <ul>
-      <li>I can&#8217;t convince myself that I can&#8217;t think of anything to draw when reflecting on the day.
-
-      <ul>
-      <li>An animal at the zoo.</li>
-      <li>A shopping cart.</li>
-      <li>A firetruck.</li>
-      </ul></li>
-      </ul></li>
-      <li>I think it&#8217;s important that my boy knows:
-
-      <ul>
-      <li>His father struggles just like he does.</li>
-      <li>Hard work is a slow process.</li>
-      <li>He is my most favorite thing in the world.</li>
-      </ul></li>
-      </ul>
-
-      <h3 id="sect-how">How / Structure<a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a></h3>
-
-      <ul>
-      <li><a href="http://www.1101.com/store/techo/2014/planner/all_about/images/planner4_image3.jpg" />Indexing</a>.
-
-      <ul>
-      <li>I use a one character code for the different types of information I write on each page.
-
-      <ul>
-      <li>First letter of my boy&#8217;s name.</li>
-      <li>First letter of my wife&#8217;s name.</li>
-      <li>H for House</li>
-      <li>P for problem solving.</li>
-      <li>T for trouble shooting.</li>
-      <li>M for mistakes</li>
-      <li>Nota Bene notes are numbered, so the note&#8217;s unique ID is placed in one square.</li>
-      <li>♥︎ for the bits I love.</li>
-      </ul></li>
-      <li>I prefer this to the non-fuzzy searching found on iOS apps.</li>
-      </ul></li>
-      <li><a href="http://www.1101.com/store/techo/2014/planner/all_about/planner5.html">Calendar Pages</a>
-
-      <ul>
-      <li>Important Dates.</li>
-      <li><em>Last Time I Fooed</em> notes.</li>
-      <li>Sick Days.</li>
-      </ul></li>
-      <li><a href="http://www.1101.com/store/techo/2014/planner/all_about/images/planner7_image2.jpg">Lists</a>
-
-      <ul>
-      <li>Locations I visited with my family this year.</li>
-      <li>Books I read to my son this year.</li>
-      <li>Books I read this year.</li>
-      <li>Games I played this year.</li>
-      </ul></li>
-      </ul>
-
-      <h4 id="section-free">Freedom</h4>
-
-      <ul>
-      <li>All days are not created equal.</li>
-      <li>Don&#8217;t be afraid to use the grid.
-
-      <ul>
-      <li>Draw a vertical line to carve out a space for a list.</li>
-      <li>Split it horizontally to jot down those important meeting notes.</li>
-      </ul></li>
-      <li>Bad days are a part of life–why try to hide them?</li>
-      </ul>
-
-      <h2 id="section-taskbook">Taskbook</h2>
-
-      <ul>
-      <li>I keep all of my tasks in a Doane Paper grid+lines notebook.</li>
-      <li>I treat them all like commands on the terminal:
-
-      <ul>
-      <li>Once a task falls off the current view, I don&#8217;t care about it.</li>
-      </ul></li>
-      </ul>
-
-      <h2 id="section-products">Products</h2>
-
-      <h3>Hobonichi</h3>
-
-      <ul>
-      <li><a href="http://www.1101.com/store/techo/2014/planner/detail_hontai/c_hpr_m.html">Hobonichi Planner Book</a>.</li>
-      <li><a href="http://onestarleathergoods.tumblr.com/post/71347612462/leather-hobonichi-planner-covers-now-available">One Star Leather Hobonichi Cover</a>.</li>
-      </ul>
-
-      <h3>Taskbook</h3>
-
-      <ul>
-      <li><a href="http://doanepaper.bigcartel.com/product/black-utility-notebook-pack-of-3">Doane Utility Notebook</a>.</li>
-      <li><a href="http://doanepaper.bigcartel.com/product/winter-session-dp-utility-notebook-cover">2013 Winter Session + DP - Utility Notebook Cover</a>.</li>
-      </ul>
-
-      <h2 id="sect-resources">Resources</h2>
-
-      <ul>
-      <li><a href="http://www.pinterest.com/chewingpencils/hobonichi/">My Hobonichi Pinterst Board</a>.</li>
-      <li><a href="http://help.1101.com/store/techo/collection/en">Usage Examples - Hobonichi Planner</a>.</li>
-      <li><a href="http://lindsaynelson.com/techo/bloglinks.shtml">The Hobonichi Planner: Lindsay&#8217;s Unofficial Guide To The English Techo</a>.</li>
-      <li><a href="http://hobonichilove.tumblr.com/">Hobonichi Love</a>.</li>
-      <li><a href="http://web.stagram.com/tag/hobonichi/">hobonichi Instagram photos</a>.</li>
-      <li><a href="http://www.flickr.com/photos/thinkinginsomniac/6105563729/in/pool-41376824@N00/">Visual Journal</a>.</li>
-      </ul>
-
-      <hr>
-
-      <p>Created: 2013&#8211;12&#8211;03<br>
-      Public: 2014&#8211;02&#8211;26<br>
-      <br />
-      Categories: Category_Notes </p>
-
-      <div class="footnotes">
-      <hr />
-      <ol>
-
-      <li id="fn:1">
-      <p>Suppresses the urge to stop working and tinker with that script. <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
-      </li>
-
-      <li id="fn:2">
-      <p><strong>NOTA BENE</strong>: I intended to include photos of pages I&#8217;ve created in my Hobonochi, but I can&#8217;t find a single page that doesn&#8217;t include a memory I want to keep for myself. Their exclusion lessens the impact of these words … What can I say? My fatherhood senses tell me to fiercely protect the memories my family makes together. <a href="#fnref:2" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
-      </li>
-
-      </ol>
-      </div>
+<ul>
+<li><a href="#section-free">Freedom</a>.</li>
+</ul></li>
+</ul></li>
+<li><a href="#section-taskbook">Taskbook</a>.</li>
+<li><a href="#section-products">Products</a>.</li>
+<li><a href="#sect-resources">Resources</a>.</li>
+</ul>
+
+<h2>Overview</h2>
+
+<ul>
+<li>Changes to Notebook Workflow and Notes.
+
+<ul>
+<li>Changes are gear-based.</li>
+<li>All concepts still stand (prerequisite).</li>
+</ul></li>
+<li><em>Creative Instincts</em> and fun.</li>
+<li>Generational thinking.</li>
+</ul>
+
+<h2>Hobonichi Planner: One of My Favorite Things</h2>
+
+<blockquote>
+<p>I want people to think of Planners not so much as something you write in, as something you read. </p>
+</blockquote>
+
+<p>~ <a href="http://pingmag.jp/2013/08/30/hobonichi-planner/">Shigesato Itoi</a> </p>
+
+<blockquote>
+<p>But really I want people to do whatever they like with it. Not just times and dates. Write down the thing you like most in the world today, you know? It’s not a duty. The handbooks given out in Japanese companies up till know were basically on the restriction side of things. “Meet so-and-so at such-and-such time.” But I want the Hobonichi Planner to be on the fun side. </p>
+</blockquote>
+
+<p>~ <a href="http://pingmag.jp/2013/08/30/hobonichi-planner/">Shigesato Itoi</a> </p>
+
+<blockquote>
+<p>There are still special joys you can only get with a physical journal like the Techo, however, like searching for the perfect pen to pair with your planner, or getting to mark in the margins that a sports team you follow won, or using a butt-based scoring system to rate your day, or affixing colorful cat stickers next to your appointments, or writing out the name of your lover or crush over and over during your daydreams, or making quick sketches of your meals, or slowly building a row of books on your shelf to create a multi-volume chronicle of your life </p>
+</blockquote>
+
+<p>~ <a href="http://tinycartridge.com/post/43010325781/tiny-review-hobonichi-techo-2013-it-might-seem">Eric Caoili</a> </p>
+
+<blockquote>
+<p>When people are alone, they have this hazy, blank period of time they can’t put a name to. </p>
+
+<p>The nameless feelings experienced during those nameless times make up a major element of a person. And one day, like a bubble surfacing in water, something will emerge in the form of words. I hope the Hobonichi Techo can serve as a means to keep those words. </p>
+
+<p>I’d like the Hobonichi Techo to be a fishing net to catch all the things you think and feel during your unnameable times. Of course you can use the techo as a scheduler, but there are already other tools you can use for that. I get the feeling there’s never been a container to keep things that surface during unnameable times, unimportant things that stick with you, or things that resonate with you when you don’t know why. </p>
+</blockquote>
+
+<p>~ <a href="http://hobonichilove.tumblr.com/post/40632283467/shigesato-itoi-on-the-hobonichi-techo-its-all">Shigesato Itoi</a> </p>
+
+<blockquote>
+<p>So this is a book that contains each person’s year. It’s a single volume in a vast collection, but there’s something really comforting to know that everyone in the world has one. At the same time, we can feel that everyone in the world deserves to be cherished by someone, and that includes both yourself and others. </p>
+</blockquote>
+
+<p>~ <a href="http://hobonichilove.tumblr.com/post/95176936327/a-message-from-hobonichi-editor-in-chief-shigesato-itoi">Shigesato Itoi</a> </p>
+
+<h3>Writing a Book Meant to Be Read</h3>
+
+<ul>
+<li>I&#8217;m the father of a two-year-old son.</li>
+<li>I&#8217;m turning 40 this year.</li>
+<li>I want to write my story for the both of us.</li>
+</ul>
+
+<h4>Digital Files Are Convenient Not Cherished</h4>
+
+<ul>
+<li>The only feature digital provides is search.</li>
+<li>There will never be an app that is capable of outputting anything my son will love because it belonged to his father.
+
+<ul>
+<li>What sense of discovery is there in opening a PDF file?
+
+<ul>
+<li>Not the same as finding a box, or a key to a safe deposit box.</li>
+</ul></li>
+<li>Anyone could have typed those words.</li>
+<li>Nothing says <em>I was here</em> like the messes we leave behind.</li>
+</ul></li>
+<li>Apps focus on capture instead of reflection.
+
+<ul>
+<li>Focusing on quick entry switches my mindset to <em>terse</em> and <em>logging</em> and <em>just the facts</em>.</li>
+<li>My experience: maybe five out of 1100+ entries are interesting.</li>
+<li>Life isn&#8217;t digital.</li>
+</ul></li>
+</ul>
+
+<h3>What</h3>
+
+<h4>Family</h4>
+
+<ul>
+<li>My Wife.
+
+<ul>
+<li>Snapshots from the moments I realize just how lucky I am.</li>
+<li>Date nights.
+
+<ul>
+<li>Ticket stubs.</li>
+</ul></li>
+<li>Little notes I receive.</li>
+</ul></li>
+<li>My Boy.
+
+<ul>
+<li>Awesome things he says.</li>
+<li>Awesome things he does.</li>
+<li>Awesome things we do together.</li>
+<li>Little pictures he makes for me.</li>
+<li>Stickers he gives me.</li>
+<li>Tags/packaging from special gifts I give him.</li>
+</ul></li>
+</ul>
+
+<h4>Milestones</h4>
+
+<ul>
+<li>My Boy.</li>
+<li>Mine.</li>
+</ul>
+
+<h4>Me</h4>
+
+<ul>
+<li><a href="https://medium.com/the-writers-room/8d6e7df7ae58"><strong>Sparks</strong></a>.</li>
+<li>Nota Bene.
+
+<ul>
+<li><a href="http://twitter.com/korzdorfer/statuses/370191493215969281">Numbered</a>.</li>
+<li><a href="http://www.amazon.com/Waste-Books-York-Review-Classics/dp/0940322501">The Waste Books</a>.</li>
+</ul></li>
+<li>Problem Solving.
+
+<ul>
+<li>The productivity acolytes have it wrong: You&#8217;re not what you make–You&#8217;re the problems you solve.</li>
+<li>My boy doesn&#8217;t need to know the details of my work, but recording how I solved a difficult problem might prove educational.</li>
+</ul></li>
+<li>Mistakes.
+
+<ul>
+<li>When I mistreated someone.</li>
+<li>Parenting failures.</li>
+<li>When I didn&#8217;t think something through.</li>
+</ul></li>
+<li>Thoughts on:
+
+<ul>
+<li>Books I&#8217;m reading.</li>
+<li>Games I&#8217;m playing.</li>
+<li>Movies I watched.</li>
+<li>Hockey games I watched.</li>
+<li>Shows I watched.</li>
+</ul></li>
+<li>Collectables.
+
+<ul>
+<li>Quotes.</li>
+</ul></li>
+</ul>
+
+<h3>Why</h3>
+
+<h4>Emphasis on Fun and Love</h4>
+
+<ul>
+<li>When I look back on my notebooks, I want to spend my time with the best version of me.</li>
+<li>When I&#8217;m writing the book, I want to have fun.
+
+<ul>
+<li>Stamps, stickers, and taping in small trophies is satisfying and ensures I will review my notes in the future.</li>
+</ul></li>
+<li>If I notice a sequence of barren or text laden pages, it&#8217;s obvious I&#8217;m starting to obsess about work and need to focus on living and spending time with my family.</li>
+<li><em>Problem Solving</em> and <em>Troubleshooting</em> notes are brief and the date points me to detailed information if need be.
+
+<ul>
+<li>I keep detailed work notes in a dedicated wiki / notebook.</li>
+</ul></li>
+</ul>
+
+<h4>Visual Hodgepodge</h4>
+
+<ul>
+<li>I&#8217;m a visual learner.</li>
+<li>I love to doodle (badly).e</li>
+<li>Every day I have a blank page to create whatever I want.<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a></li>
+</ul>
+
+<h4>Teaching by Example</h4>
+
+<ul>
+<li>I never learned how to draw.
+
+<ul>
+<li>I&#8217;ve always wanted to.</li>
+</ul></li>
+<li>I include a small sketch / doodle on almost every page.
+
+<ul>
+<li>I can&#8217;t convince myself that I can&#8217;t think of anything to draw when reflecting on the day.
+
+<ul>
+<li>An animal at the zoo.</li>
+<li>A shopping cart.</li>
+<li>A firetruck.</li>
+</ul></li>
+</ul></li>
+<li>I think it&#8217;s important that my boy knows:
+
+<ul>
+<li>His father struggles just like he does.</li>
+<li>Hard work is a slow process.</li>
+<li>He is my most favorite thing in the world.</li>
+</ul></li>
+</ul>
+
+<h3>How / Structure<a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a></h3>
+
+<ul>
+<li><strong><a href="http://www.1101.com/store/techo/2014/planner/all_about/images/planner4_image3.jpg" />Indexing</a></strong>.
+
+<ul>
+<li>I use a one character code for the different types of information I write on each page.
+
+<ul>
+<li>First letter of my boy&#8217;s name.</li>
+<li>First letter of my wife&#8217;s name.</li>
+<li>H for House</li>
+<li>P for problem solving.</li>
+<li>T for trouble shooting.</li>
+<li>X for mistakes</li>
+<li>Nota Bene notes are numbered, so the note&#8217;s unique ID is placed in one square.</li>
+<li>♥︎ for the bits I love.</li>
+<li>! for milestones.</li>
+<li>M for medical.</li>
+<li>D for Devil / NHL Hockey.</li>
+</ul></li>
+<li>I prefer this to the non-fuzzy searching found on iOS apps.</li>
+</ul></li>
+<li><strong><a href="http://www.1101.com/store/techo/2014/planner/all_about/planner5.html">Calendar Pages</a></strong>
+
+<ul>
+<li>Important Dates.</li>
+<li><em>Last Time I Fooed</em> notes.</li>
+<li>Sick Days.</li>
+</ul></li>
+<li><strong>Daily Pages</strong>
+
+<ul>
+<li>A title.</li>
+<li>On the left-hand side of each page, I graph the day.<a href="#fn:3" id="fnref:3" title="see footnote" class="footnote">[3]</a>
+
+<ul>
+<li>Left Line = &#8211;1; Unpleasant.</li>
+<li>Middle Line = 0; Everything is fine.</li>
+<li>Right Line = +1; Happy times.</li>
+</ul></li>
+</ul></li>
+<li><strong><a href="http://www.1101.com/store/techo/2014/planner/all_about/images/planner7_image2.jpg">Lists</a></strong>
+
+<ul>
+<li>Locations I visited with my family this year.</li>
+<li>Books I read to my son this year.</li>
+<li>Books I read this year.</li>
+<li>Games I played this year.</li>
+</ul></li>
+</ul>
+
+<h4>Freedom</h4>
+
+<ul>
+<li>All days are not created equal.</li>
+<li>Don&#8217;t be afraid to use the grid.
+
+<ul>
+<li>Draw a vertical line to carve out a space for a list.</li>
+<li>Split it horizontally to jot down those important meeting notes.</li>
+</ul></li>
+<li>Bad days are a part of life–why try to hide them?</li>
+</ul>
+
+<h2>Taskbook</h2>
+
+<ul>
+<li>I keep all of my tasks in a Doane Paper grid+lines notebook.</li>
+<li>I treat them all like commands on the terminal:
+
+<ul>
+<li>Once a task falls off the current view, I don&#8217;t care about it.</li>
+</ul></li>
+</ul>
+
+<h2>Products</h2>
+
+<h3>Hobonichi</h3>
+
+<ul>
+<li><a href="http://www.1101.com/store/techo/2014/planner/detail_hontai/c_hpr_m.html">Hobonichi Planner Book</a>.</li>
+<li><a href="http://onestarleathergoods.tumblr.com/post/71347612462/leather-hobonichi-planner-covers-now-available">One Star Leather Hobonichi Cover</a>.</li>
+</ul>
+
+<h3>Taskbook</h3>
+
+<ul>
+<li><a href="http://doanepaper.bigcartel.com/product/black-utility-notebook-pack-of-3">Doane Utility Notebook</a>.</li>
+<li><a href="http://doanepaper.bigcartel.com/product/winter-session-dp-utility-notebook-cover">2013 Winter Session + DP - Utility Notebook Cover</a>.</li>
+</ul>
+
+<h2>Resources</h2>
+
+<ul>
+<li><a href="http://www.pinterest.com/chewingpencils/hobonichi/">My Hobonichi Pinterst Board</a>.</li>
+<li><a href="http://help.1101.com/store/techo/collection/en">Usage Examples - Hobonichi Planner</a>.</li>
+<li><a href="http://lindsaynelson.com/techo/bloglinks.shtml">The Hobonichi Planner: Lindsay&#8217;s Unofficial Guide To The English Techo</a>.</li>
+<li><a href="http://hobonichilove.tumblr.com/">Hobonichi Love</a>.</li>
+<li><a href="http://web.stagram.com/tag/hobonichi/">hobonichi Instagram photos</a>.</li>
+<li><a href="http://www.flickr.com/photos/thinkinginsomniac/6105563729/in/pool-41376824@N00/">Visual Journal</a>.</li>
+</ul>
+
+<hr />
+
+<p>Created: 2013&#8211;12&#8211;03<br/>
+Updated: 2014&#8211;08&#8211;19<br/>
+<!--<br />  
+Categories: Category_Notes--> </p>
+
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn:1">
+<p>Suppresses the urge to stop working and tinker with that script.  <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+<li id="fn:2">
+<p><strong>NOTA BENE</strong>: I intended to include photos of pages I&#8217;ve created in my Hobonochi, but I can&#8217;t find a single page that doesn&#8217;t include a memory I want to keep for myself. Their exclusion lessens the impact of these words … What can I say? My fatherhood senses tell me to fiercely protect the memories my family makes together.  <a href="#fnref:2" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+<li id="fn:3">
+<p>A <em>very</em> ugly visual example: <a href="http://d.pr/i/MBQx">http://d.pr/i/MBQx</a>  <a href="#fnref:3" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+</ol>
 </div>
 
 <!-- ##END MARKED WRAPPER## -->

@@ -52,6 +52,13 @@ Keywords:
 
 ~ [Shigesato Itoi][3]
 
+
+
+> So this is a book that contains each person’s year. It’s a single volume in a vast collection, but there’s something really comforting to know that everyone in the world has one. At the same time, we can feel that everyone in the world deserves to be cherished by someone, and that includes both yourself and others.
+
+~ [Shigesato Itoi][4]
+
+
 ### Writing a Book Meant to Be Read [sect-writingbook]
 
 * I'm the father of a two-year-old son.
@@ -69,6 +76,7 @@ Keywords:
 * Apps focus on capture instead of reflection.
 	* Focusing on quick entry switches my mindset to *terse* and *logging* and *just the facts*.
 	* My experience: maybe five out of 1100+ entries are interesting. 
+	* Life isn't digital.
 
 ### What [sect-usecase]
 
@@ -131,14 +139,15 @@ Keywords:
 #### Visual Hodgepodge [sect-hodge]
 
 * I'm a visual learner.
-* I love to doodle (badly).
+* I love to doodle (badly).e
 * Every day I have a blank page to create whatever I want.[^1]
+	
 
 #### Teaching by Example [sect-teach]
 
 * I never learned how to draw.
 	* I've always wanted to.
-* I include a small sketch / doodle on every page.
+* I include a small sketch / doodle on almost every page.
 	* I can't convince myself that I can't think of anything to draw when reflecting on the day.
 		* An animal at the zoo.
 		* A shopping cart.
@@ -151,22 +160,32 @@ Keywords:
 
 ### How / Structure[^2] [sect-how]
 
-* <a href="http://www.1101.com/store/techo/2014/planner/all_about/images/planner4_image3.jpg" />Indexing</a>.
+* **<a href="http://www.1101.com/store/techo/2014/planner/all_about/images/planner4_image3.jpg" />Indexing</a>**.
 	* I use a one character code for the different types of information I write on each page.
 		* First letter of my boy's name.
 		* First letter of my wife's name.
 		* H for House
 		* P for problem solving.
 		* T for trouble shooting.
-		* M for mistakes
+		* X for mistakes
 		* Nota Bene notes are numbered, so the note's unique ID is placed in one square.
 		* ♥︎ for the bits I love.
+		* ! for milestones.
+		* M for medical.
+		* D for Devil / NHL Hockey.
 	* I prefer this to the non-fuzzy searching found on iOS apps.
-* [Calendar Pages](http://www.1101.com/store/techo/2014/planner/all_about/planner5.html)
+* **[Calendar Pages](http://www.1101.com/store/techo/2014/planner/all_about/planner5.html)**
 	* Important Dates.
 	* *Last Time I Fooed* notes.
 	* Sick Days.
-* [Lists](http://www.1101.com/store/techo/2014/planner/all_about/images/planner7_image2.jpg)
+* **Daily Pages**
+	* A title. 
+	* On the left-hand side of each page, I graph the day.[^3]
+		* Left Line = -1; Unpleasant.
+		* Middle Line = 0; Everything is fine.
+		* Right Line = +1; Happy times.
+
+* **[Lists](http://www.1101.com/store/techo/2014/planner/all_about/images/planner7_image2.jpg)**
 	* Locations I visited with my family this year.
 	* Books I read to my son this year.
 	* Books I read this year.
@@ -211,15 +230,19 @@ Keywords:
 ----
 
 Created: 2013-12-03  
-Public:	2014-02-26  
-<br />
-Categories: Category_Notes 
+Updated: 2014-08-19  
+<!--<br />
+Categories: Category_Notes-->
 
 [^1]: Suppresses the urge to stop working and tinker with that script.
 
 [^2]: **NOTA BENE**: I intended to include photos of pages I've created in my Hobonochi, but I can't find a single page that doesn't include a memory I want to keep for myself. Their exclusion lessens the impact of these words … What can I say? My fatherhood senses tell me to fiercely protect the memories my family makes together.
 
+[^3]: A *very* ugly visual example: <http://d.pr/i/MBQx>
+
+
 
 [1]: http://pingmag.jp/2013/08/30/hobonichi-planner/
 [2]: http://tinycartridge.com/post/43010325781/tiny-review-hobonichi-techo-2013-it-might-seem
 [3]: http://hobonichilove.tumblr.com/post/40632283467/shigesato-itoi-on-the-hobonichi-techo-its-all
+[4]: http://hobonichilove.tumblr.com/post/95176936327/a-message-from-hobonichi-editor-in-chief-shigesato-itoi
