@@ -1,0 +1,818 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Due.app Workflow and Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+body {
+    background-color: #f2f2f2;
+    color: #3c3c3c;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom:10px;
+
+    /* Change font size below */
+    font-size: 14px;
+    line-height: 1.4em;
+
+    /* Change font below */
+
+    /* Sans-serif fonts */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+@font-face {
+                font-family: 'mplus-1m-regular';
+                src: url('./font/mplus-1m-regular.eot');
+                src: url('./font/mplus-1m-regular.eot?#iefix') format('embedded-opentype'),
+                     url('./font/mplus-1m-regular.woff') format('woff'),
+                     url('./font/mplus-1m-regular.ttf') format('truetype'),
+                     url('./font/mplus-1m-regular.svg#mplus-1m-regular') format('svg');
+                font-weight: normal;
+                font-style: normal;
+            }
+@font-face {
+                font-family: 'MetaBook-Roman';
+                src: url('./font/mtbkro.eot');
+                src: url('./font/mtbkro.eot?#iefix') format('embedded-opentype'),
+                         url('./font/mtbkro.woff') format('woff'),
+                         url('./font/mtbkro.ttf') format('truetype'),
+                         url('./font/mtbkro.svg#mtbkro') format('svg');
+                font-weight: normal;
+                font-style: normal;
+        }
+
+a {
+    color: #308bd8;
+    text-decoration:none;
+}
+a:hover {
+    text-decoration: underline;
+}
+/* headings */
+h1, h2, h3, h4 {font-family: "MetaBook-Roman";}
+h1, h2 {
+    line-height:1.2em;
+    margin-top:32px;
+    margin-bottom:12px;
+}
+h1:first-child {
+    margin-top:0;
+}
+h3, h4, h5, h6 {
+    margin-top:12px;
+    margin-bottom:12px;
+}
+h5, h6 {
+    font-size:0.9em;
+    line-height:1.0em;
+}
+
+//h2 { border-bottom:1px solid #dddddd;}
+h2 { border-bottom: medium double #ddd; margin-top:55px;}
+h3 { border-bottom:1px solid #dddddd; margin-top:35px;}
+h1 + h2 {margin-top:35px;}
+h1 + p {margin-top:45px;}
+
+/* pad H3 Block that immediatly follow an H2 block */
+h2 + h3 {margin-top:25px;}
+
+
+/* Prevents Header underline after a horizontal rule */
+//hr + h2 {border-bottom: none;}
+
+
+/* end of headings */
+p {
+    margin:0 0 24px 0;
+}
+p:last-child {
+    margin:0;
+}
+
+//img {border: 4px solid #dedede;}
+
+// Used in Due Workflow
+//#wrapper img.frame {padding:5px; background:white; border:1px solid #ccc;}
+
+#wrapper hr {
+    width: 100%;
+    margin: 3em auto;
+    border: 0;
+    color: #eee;
+    background-color: #ccc;
+    height: 1px;
+    -webkit-box-shadow:0px 1px 0px rgba(255, 255, 255, 0.75);
+}
+/* lists */
+ol {
+    list-style: outside decimal;
+}
+ul {
+    list-style: outside disc;
+}
+ol, ul {
+    padding-left:0;
+    margin-bottom:24px;
+}
+ol li {
+    margin-left:28px;
+}
+ul li {
+    margin-bottom:8px;
+    margin-left:16px;
+}
+ol li {
+    margin-bottom:8px;
+}
+
+ol:last-child, ul:last-child {
+    margin:0;
+}
+li > ol, li > ul {
+    padding-left:12px;
+    padding-top:5px;
+}
+
+
+dl {
+    margin-bottom:30px;
+}
+dl dt {
+    font-weight:bold;
+    margin-bottom:8px;
+}
+dl dd {
+    margin-left:0;
+    margin-bottom:12px;
+}
+/*
+dl dd:last-child, dl:last-child {
+    margin-bottom:0;
+}
+
+
+dl {    float: left;
+    width: 800px;
+    margin: 1em 0;
+    padding: 0;
+margin-bottom: 30px;
+}
+dt {    clear: left;
+    float: left;
+    width: 200px;
+    margin: 0;
+    padding: 5px;
+    font-weight: bold;
+}
+dd {
+    float: left;
+    width: 500px;
+    margin: 0;
+    padding: 5px;
+}
+*/
+dl + h2, h1, h3, h4, p, ul, hr {clear:both;}
+h2 + dl { margin-bottom: 45px;}
+
+/* end of lists */
+pre {
+    white-space: pre-wrap;
+    width: 96%;
+    margin-bottom: 24px;
+    overflow: hidden;
+    padding: 3px 10px;
+    -webkit-border-radius: 3px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+code {
+font-family: 'mplus-1m-regular';
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 2px;
+    -webkit-border-radius: 3px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+pre code {
+    white-space: pre-wrap;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    -webkit-border-radius: 0;
+}
+blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    width: 96%;
+    padding: 0 10px;
+    border-left: 3px solid #ddd;
+    color: #777;
+}
+table {
+   margin-left: auto;
+   margin-right: auto;
+    margin-top:20px;
+    //margin-left:50px;
+    //margin-top: 24px;
+    //margin-bottom: 24px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-spacing: 0;
+}
+table th {
+    padding: 3px 10px;
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+table tr {
+}
+table td {
+    padding: 3px 10px;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+tr:nth-child(even){ background-color:#eee; }
+caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+figure {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#wrapper img {
+    display: block;
+    margin: 1em auto;
+    max-width: 100%;
+}
+figcaption {
+    font-size: 0.8em;
+    font-style: italic;
+}
+mark {
+    background: #fefec0;
+    padding:1px 3px;
+}
+
+#footer {
+    border-top:medium double #ddd;
+    font-size:11px;
+    padding-top:5px;
+    margin-top:15px;">Outlines Are Cool<span style="float:right;
+}
+/* classes */
+
+.markdowncitation {
+}
+.footnote {
+    font-size: 0.8em;
+    vertical-align: super;
+}
+.footnotes ol {
+    font-weight: bold;
+}
+.footnotes ol li p {
+    font-weight: normal;
+}
+
+/* custom formatting classes */
+
+.shadow {
+    -webkit-box-shadow: 0 2px 4px #999;
+}
+
+.source {
+    text-align: center;
+    font-size: 0.8em;
+    color: #777;
+    margin: -40px;
+}
+
+a.header-right {
+    float:right;
+    font-size:16px;
+    margin-bottom:15px;
+}
+
+a.header-left {
+    float:left;
+    font-size:16px;
+}
+
+h1 {margin-top: 0;}
+
+
+hr {
+    border:0;
+    margin-top:40px;
+    margin-bottom:30px;
+    // border-bottom:1px solid #dddddd;
+}
+
+
+hr {
+    padding: 0;
+    border: none;
+    border-top: medium double #ddd;
+    color: #ddd;
+    text-align: center;
+    margin-top:25px;
+    margin-bottom:15px;
+}
+
+
+hr + p {margin:0px; padding:0px;}
+
+
+
+hr + h2 {margin-top:0;}
+hr + h3 {margin-top:0; padding-top:3px;}
+blockquote + hr {margin: 25px 15% 25px 15%}
+
+</style>
+
+</head>
+<body class="normal">
+  <div id="wrapper">
+      <h1>Outlines: Due.app Workflow and Notes</h1>
+<!-- *2013-05-17 - Nota Bene: Due to hosting issues, Chrome on the Mac is not displaying images correctly. iOS versions of Chrome are working as expected.* -->
+
+<ul>
+<li><a href="#section-overview">Overview</a>
+
+<ul>
+<li><a href="#section-why">Why Use Due</a></li>
+<li><a href="#section-eaf">Ebb and Flow</a></li>
+<li><a href="#section-ds">Default Setting</a></li>
+</ul></li>
+<li><a href="#section-uc">Use Cases</a>
+
+<ul>
+<li><a href="#section-today">Today</a></li>
+<li><a href="#section-medical">Medical</a></li>
+<li><a href="#section-rituals">Rituals</a></li>
+<li><a href="#section-of">OmniFocus</a></li>
+<li><a href="#section-rr">Repeating Reminders</a></li>
+<li><a href="#section-oos">Out of Scope</a></li>
+<li><a href="#section-comm">Communications</a></li>
+</ul></li>
+<li><a href="#section-rt">Random Tips</a>
+
+<ul>
+<li><a href="#section-drafts">Drafts Actions</a></li>
+<li><a href="#section-lcp">Launch Center Pro</a></li>
+</ul></li>
+<li><a href="#section-swg">Scripts, Workflows and Other Goodies</a></li>
+</ul>
+
+<h2>Overview</h2>
+
+<h3>Why Use <a href="http://www.dueapp.com">Due</a></h3>
+
+<ul>
+<li>The Pitch:
+
+<ul>
+<li>It&#8217;s screaming fast.</li>
+<li>Easy to use.</li>
+<li>Genius implementation for deferring reminders.</li>
+<li>Is available on my iPhone, iPad and Mac.</li>
+</ul></li>
+<li>Meanwhile, in the Real World<a href="#fn:1" id="fnref:1" title="see footnote" class="footnote">[1]</a>:
+
+<ul>
+<li>I am absent-minded.</li>
+<li>I have a scorching case of the ADHD.
+
+<ul>
+<li>I will forget to eat if left alone for long periods of time.</li>
+</ul></li>
+<li>I have several medical issues.
+
+<ul>
+<li>I have multiple reminders set to take medication.</li>
+</ul></li>
+<li>If I didn&#8217;t have most of these strategies in place I&#8217;d be divorced, intolerable and manic.</li>
+</ul></li>
+</ul>
+
+<h3>Due Controls the Ebb and Flow of My Day</h3>
+
+<ul>
+<li>I use Due to gently (or viciously) remind me there are things which require my attention throughout the day.
+
+<ul>
+<li>Example: Returning a phone call.
+
+<ul>
+<li>I don&#8217;t know if my son will be screaming his lungs out at 9:30 on Thursday morning.</li>
+<li>I might call, but not reach the person I need to speak with.</li>
+</ul></li>
+<li>Due allows me to stop worrying about the logistics and focus on completing the tasks.
+
+<ul>
+<li>If I can&#8217;t make the call, I just tap the hour glass icon.</li>
+</ul></li>
+</ul></li>
+<li>Sanity Check: Most things just need to get done sometime today. Due nags me until I get them done.</li>
+</ul>
+
+<h3>Default Settings:</h3>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Setting</th>
+	<th style="text-align:left;">Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">Snooze</td>
+	<td style="text-align:left;">1 Hour</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Sync</td>
+	<td style="text-align:left;">Dropbox</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Badges</td>
+	<td style="text-align:left;">Overdue Only</td>
+</tr>
+<tr>
+	<td style="text-align:left;">Quick Access Timings</td>
+	<td style="text-align:left;">06:00</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">11:30</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">16:30</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">19:0</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>Nota Bene: My iPad is set to never sound an alert.</li>
+</ul>
+
+<h2>Use Cases</h2>
+
+<h3>Today</h3>
+
+<ul>
+<li>Any tasks that come up and must be completed on the same day are always placed in Due.
+
+<ul>
+<li>Formatted: <code>TODAY ☳ foo</code>.</li>
+<li>Usually set to one of my four quick times.</li>
+<li><a href="drafts://x-callback-url/import_action?type=URL&amp;name=%F0%9F%92%8A%20TODAY&amp;url=due%3A%2F%2Fx-callback-url%2Fadd%3Ftitle%3D%7B%7BTODAY%20%E2%98%B3%20%7D%7D%5B%5Bdraft%5D%5D">Install</a>.</li>
+</ul></li>
+</ul>
+
+<h3>Medical</h3>
+
+<ul>
+<li>I take a lot of pills, and Due helps remind me when I need to take them.
+
+<ul>
+<li>I use a distinct alarm for my pills.</li>
+<li>I set the snooze to one minute.</li>
+</ul></li>
+</ul>
+
+<h3>Rituals</h3>
+
+<ul>
+<li>Some folks keep their morning / evening / weekly review checklist in OmniFocus.
+
+<ul>
+<li>This freaks me out.</li>
+</ul></li>
+<li>I have repeating events to trigger my ritual checklists.
+
+<ul>
+<li>I use a distinct alarm for my checklists.</li>
+<li>I set the snooze to one minute.</li>
+<li>If the checklist involves working at my computer, I add a URL to open the checklist on <a href="http://www.workflowy.com">Workflowy</a>.</li>
+<li>If the checklist involves work away from my computer, I add a URL to open the <a href="https://itunes.apple.com/us/app/paperless-lists-+-checklists/id359564368?mt=8">Paperless Lists iOS app</a>.</li>
+</ul></li>
+</ul>
+
+<h4>Some Checklists Involve Items That Create Additional Due Reminders:</h4>
+
+<ul>
+<li>I have morning and evening checklists for the house.
+
+<ul>
+<li>For this example, the interesting items on these checklists include a question mark.
+
+<ul>
+<li>These items contain a URL in the note field for quickly generating a Due &#8216;Today&#8217; type reminder.</li>
+</ul></li>
+<li>Items you&#8217;ll find on my checklists:
+
+<ul>
+<li>Do I need to do anything with the dishwasher?</li>
+<li>Do I need to do anything with the laundry?</li>
+<li>Do I need to buy milk?</li>
+<li>Do I need to make a pitcher of iced tea for my wife?</li>
+<li>Do I need to set the DVR for a hockey game?</li>
+</ul></li>
+</ul></li>
+</ul>
+<!-- [Additional Reminders Screenshot](/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/Archive/seankorzdorferdotorg%20website/open_notebook.vpdoc/pages/9/90ede3dc-36e4-4669-9412-8548d3bc04c2  
+) -->
+<figure>
+<img class="frame" src="file://localhost/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/open_notebook/screens/screenshot-due-checklist.jpg" style="padding:5px; background:white; border:1px solid #ccc;" />
+<figcaption>Additional Reminders Screenshot</figcaption></figure>
+
+<h3>OmniFocus</h3>
+
+<ul>
+<li>I have a few repeating reminders that will open OmniFocus perspectives:
+
+<ul>
+<li>Family - Set to open when my wife gets home from work.</li>
+<li>Morning Review.</li>
+<li>Evening Review.</li>
+<li>Weekly Review.</li>
+<li>Today.</li>
+</ul></li>
+</ul>
+
+<h3>Repeating Conditional Reminders</h3>
+
+<ul>
+<li>I have reminders that are conditional triggers:
+
+<ul>
+<li>Weather.</li>
+<li>Other people.</li>
+<li>Not being able to see the amount of deodorant I have left because the cheap sonsofbitches won&#8217;t put a window in the packaging.</li>
+</ul></li>
+<li>OmniFocus is terrible at handling these types of tasks.</li>
+<li>Due is great for reminders where the the actual repeating interval is unknown.
+
+<ul>
+<li>Create a repeating reminder with short intervals that ask you a question.
+
+<ul>
+<li>I usually set the intervals to one or two weeks (sometimes one month).</li>
+</ul></li>
+<li>Append a URL to the reminder that will create a new OmniFocus task or Due reminder.</li>
+</ul></li>
+<li>Formatted: <code>¿ foo?</code>.</li>
+</ul>
+<!-- ![Repeating Reminders Screenshot](/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/Archive/seankorzdorferdotorg%20website/open_notebook.vpdoc/pages/f/f7b01e64-d11c-4c47-9591-0a5382581103  
+) -->
+<figure>
+<img src="//localhost/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/open_notebook/screens/screenshot_due_question.jpg" style="padding:5px; background:white; border:1px solid #ccc;" />
+<figcaption>Repeating Reminders</figcaption></figure>
+
+<h3>Out of Scope</h3>
+
+<ul>
+<li>My OmniFocus Inbox used to be chock full of items that involved checking out an app, or reading an article.
+
+<ul>
+<li>It sucked.</li>
+</ul></li>
+<li>I now add those items to Due: <a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a>
+
+<ul>
+<li>Apps, articles and other miscellaneous bits which might be interesting are formatted: <code>LOOK INTO ☳ foo</code>.</li>
+<li>Articles that I don&#8217;t <em>need</em> to read, or not associated with an already existing project are formatted: <code>READ ※ foo</code>.</li>
+<li>Podcasts that I&#8217;m not subscribed to, but want to listen to are formatted: <code>LISTEN ※ foo</code>.</li>
+<li>Bits of the day that I want to remember to add to DayOne later in the evening are formatted: <code>LOG ☳ foo</code>.</li>
+</ul></li>
+<li>Using a defined format allows me to quickly search the different types of reminders. This is important.
+
+<ul>
+<li>By quickly adding them to Due, I can silence the voice in the back of my head that won&#8217;t go away until I know I won&#8217;t forget about it later.</li>
+<li>Later on that day, I perform a quick search and will probably notice way too many items.
+
+<ul>
+<li>This now triggers another voice in my head that is freaking the hell out.</li>
+<li>I usually trash most of the reminders I added. 30 seconds later: there are no voices screaming at me.</li>
+<li>Bonus: Due logs all completed tasks, so if I realize that I really do need to check out that $400.00 pencil sharpener, I haven&#8217;t lost anything.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3>Communication</h3>
+
+<ul>
+<li>Remember to discuss something with my wife.
+
+<ul>
+<li>A <a href="http://agiletortoise.com/drafts/">Drafts</a> action formatted with my wife&#8217;s name and set to trigger when she comes home from work.</li>
+</ul></li>
+<li>Remember to SMS a message to someone later:
+
+<ul>
+<li>Using a Drafts action I can quickly capture the essence of the message and who it&#8217;s for, then ship it off to Due.</li>
+<li>Formatted: <code>SMS Later ☳ foo</code></li>
+<li><a href="drafts://x-callback-url/import_action?type=URL&amp;name=%F0%9F%92%8A%20SMS%20Later&amp;url=due%3A%2F%2Fx-callback-url%2Fadd%3Ftitle%3D%7B%7BSMS%20Later%20%E2%98%B3%20%7D%7D%5B%5Btitle%5D%5D%2520%7B%7Bdrafts%3A%2F%2Fx-callback-url%2Fcreate%3Ftext%3D%5B%5Bbody%5D%5D%26action%3DMessage%7D%7D%26x-source%3DDrafts%26x-success%3Ddrafts%3A%2F%2F">Install</a>.</li>
+</ul></li>
+<li>Remember to respond to a mention on Twitter.
+
+<ul>
+<li>A Drafts action that appends the URL to open my Twitter mentions in TweetBot.</li>
+<li>Formatted: <code>Reply to Tooter ☳ foo</code>.</li>
+</ul>
+
+<p><code>due://x-callback-url/add?title={{Reply to Tooter ☳ }}[[draft]]%20{{tweetbot://YOUR_URSERNAME/mentions}}</code> </p></li>
+<li>Birthday Messages.
+
+<ul>
+<li>Remind me to SMS or call important folks on their birthdays.</li>
+<li>You can use the URL scheme <code>Tel://xxx-xxx-xxxx</code><a href="#fn:3" id="fnref:3" title="see footnote" class="footnote">[3]</a> to launch the phone app.</li>
+</ul></li>
+</ul>
+<!-- ![SMS Later](/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/Archive/seankorzdorferdotorg%20website/open_notebook.vpdoc/pages/3/329330a3-16fa-4136-832d-50c14bdeb6d8  
+ ) -->
+<figure>
+<img src="//localhost/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/open_notebook/screens/screenshot-due-jake-looked-pretty.jpg" style="padding:5px; background:white; border:1px solid #ccc;" />
+<figcaption>SMS Later</figcaption></figure>
+<!-- ![Reply to Tooter](/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/Archive/seankorzdorferdotorg%20website/open_notebook.vpdoc/pages/4/4e636181-3923-430e-a74a-aa175637e8b3  
+ ) -->
+<figure>
+<img src="//localhost/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/open_notebook/screens/screenshot-due-finn-toot.jpg" style="padding:5px; background:white; border:1px solid #ccc;" />
+<figcaption>Reply to Tooter</figcaption></figure>
+
+<h2>Random Tips</h2>
+
+<h3>Drafts Actions</h3>
+
+<ul>
+<li>Reminders are not required to have alarms.</li>
+<li>Drafts Action for Creating Sequential Tasks in Due<a href="#fn:4" id="fnref:4" title="see footnote" class="footnote">[4]</a>.</li>
+<li>Drafts Action for Getting Me Out of the House on Time.</li>
+<li>Add Multiple Items to Due.
+
+<ul>
+<li>One Due reminder per line.</li>
+<li><a href="drafts://x-callback-url/import_action?type=URL&amp;name=%F0%9F%92%8A%20Add%20Tasks%20to%20Due&amp;url=due%3A%2F%2Fx-callback-url%2Fadd%3Fx-source%3Ddrafts%3A%2F%2F%26title%3D%5B%5Btitle%5D%5D%26x-cancel%3D%7B%7Bdrafts%3A%2F%2Fx-callback-url%2Fcreate%3Ftext%3D%5B%5Bbody%5D%5D%26action%3DAdd%2520Tasks%2520to%2520Due%7D%7D%26x-success%3D%7B%7Bdrafts%3A%2F%2Fx-callback-url%2Fcreate%3Ftext%3D%5B%5Bbody%5D%5D%26action%3DAdd%2520Tasks%2520to%2520Due%7D%7D">Install</a>.</li>
+</ul></li>
+<li>Set Due Reminders via a calendar event&#8217;s URL field.
+
+<ul>
+<li>I prepend the calendar event title with: 💊.</li>
+</ul></li>
+<li>Due This Weekend.
+
+<ul>
+<li>Creates a reminder for 07:00 on Saturday.</li>
+<li><a href="drafts://x-callback-url/import_action?type=URL&amp;name=%F0%9F%92%8A%20Due%20this%20Weekend&amp;url=due%3A%2F%2Fx-callback-url%2Fadd%3Ftitle%3D%5B%5Bdraft%5D%5D%2520Saturday%25207%2520am">Install</a>.</li>
+</ul></li>
+<li>Due Next Week.
+
+<ul>
+<li>Creates a reminder for 07:00 on Monday.</li>
+<li><a href="drafts://x-callback-url/import_action?type=URL&amp;name=%F0%9F%92%8A%20Due%20Next%20Week&amp;url=due%3A%2F%2Fx-callback-url%2Fadd%3Ftitle%3D%7B%7B%21%20%20%E2%98%B3%20%7D%7D%5B%5Bdraft%5D%5D%2520Monday%25207%2520am">Install</a>.</li>
+</ul></li>
+<li>Use Due to Create Repeating Tasks in TaskPaper.
+
+<ol>
+<li>Create a Drafts Dropbox action to append to a specific file.</li>
+<li>Create repeating reminder in Due with the URL to the above Drafts action.</li>
+</ol></li>
+</ul>
+<!-- ![Calendar Event with URL](/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/Archive/seankorzdorferdotorg%20website/open_notebook.vpdoc/pages/5/5638ac8d-a27e-497a-8044-a59b72629f67  
+) -->
+<figure>
+<img src="//localhost/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/open_notebook/screens/screenshot-due-calendar.jpg" style="padding:5px; background:white; border:1px solid #ccc;" />
+<figcaption>Calendar Event with URL</figcaption></figure>
+<!-- ![Repeating TaskPaper](/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/Archive/seankorzdorferdotorg%20website/open_notebook.vpdoc/pages/6/67208432-c93d-48c1-9ce4-322617c5e02c  
+) -->
+<figure>
+<img src="//localhost/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/open_notebook/screens/screenshot-taskpaper.jpg" style="padding:5px; background:white; border:1px solid #ccc;" />
+<figcaption>Repeating TaskPaper</figcaption></figure>
+
+<h3>Launch Center Pro</h3>
+
+<ul>
+<li>Laundry
+
+<ul>
+<li>Creates a two stage sequential reminder.
+
+<ul>
+<li>Move laundry to dryer in one hour.</li>
+<li>Fold Laundry in two hours.</li>
+</ul></li>
+</ul></li>
+<li>Run Dishwasher
+
+<ul>
+<li>Creates a three stage sequential reminder
+
+<ul>
+<li>Run dishwasher.</li>
+<li>Put Dishes away.</li>
+<li>Put Baby stuff away after additional drying.</li>
+</ul></li>
+</ul></li>
+<li>Set DVR for a New Jersey Devils Game.
+
+<ul>
+<li>Creates a two stage sequential reminder.
+
+<ul>
+<li>Asks for the time to set the DVR.</li>
+<li>Asks for the time to verify that the shitty TWC DVR is actually recording.</li>
+</ul></li>
+</ul></li>
+<li>Get Ready to Go.
+
+<ul>
+<li>Creates a two stage sequential reminder.
+
+<ul>
+<li>Asks for the time to start getting ready to go.</li>
+<li>Asks for the time I have to leave by.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h2>Scripts, Workflows and other Goodies</h2>
+
+<ul>
+<li><a href="https://github.com/ChewingPencils/alfred_workflows">Alfred 2 Due Workflow</a>.
+
+<ul>
+<li>Add Calendar Events to Due.</li>
+<li>Set Pomodoro timers.</li>
+<li>Adds four quick time options.</li>
+<li>Search Reminders.</li>
+<li>Search Timers.</li>
+<li>Search Log.</li>
+<li>OmniFocus2Due.</li>
+</ul></li>
+<li><a href="https://github.com/ChewingPencils/omnifocus2due_script">OmniFocus2Due</a></li>
+</ul>
+
+<hr />
+
+<p>Categories: Category_App, Category_Notes, Category_Workflow </p>
+
+<hr />
+
+<p>See Also: </p>
+
+<ul>
+<li>Drafts Action for Creating Sequential Tasks in Due.</li>
+<li>Launch Center Pro Action for Creating a Due Reminder Using secslater and TextExpander.</li>
+<li>Making Out With URLs–Drafts 3.0 and Launch Center Pro.</li>
+</ul>
+
+<div class="footnotes">
+<hr />
+<ol>
+
+<li id="fn:1">
+<p>After OmniFocus Workflow and Notes, I&#8217;ve seen a couple folks refer to me using Due.app as a side-car to OmniFocus. This isn&#8217;t the case. I actually use Due to drive my entire system.  <a href="#fnref:1" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+<li id="fn:2">
+<p>Mostly through <a href="file://localhost/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/open_notebook/due_bookmarklets.js">bookmarklets</a>  <a href="#fnref:2" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+<li id="fn:3">
+<p>The dashes are optional <a href="#fnref:3" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+<li id="fn:4">
+<p>As far as I know, <a href="https://github.com/ChewingPencils/sequential_due_app_tasks/blob/master/sequential%20due%20app%20tasks.md">Using Launch Center Pro to Create Sequential Tasks for Due App</a> is the first documented use case that chains multiple registered URL schemes for iOS. <a href="#fnref:4" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+</li>
+
+</ol>
+</div>
+
+<!-- ##END MARKED WRAPPER## -->
+    </div>
+</body>
+</html>
