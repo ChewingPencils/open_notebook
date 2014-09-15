@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>Due.app Workflow and Notes</title>
+  <title>Due Workflow and Notes 1.5</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
 body {
@@ -344,7 +344,7 @@ blockquote + hr {margin: 25px 15% 25px 15%}
 </head>
 <body class="normal">
   <div id="wrapper">
-      <h1>Outlines: Due.app Workflow and Notes</h1>
+      <h1>Due.app Workflow and Notes</h1>
 <!-- *2013-05-17 - Nota Bene: Due to hosting issues, Chrome on the Mac is not displaying images correctly. iOS versions of Chrome are working as expected.* -->
 
 <ul>
@@ -358,10 +358,12 @@ blockquote + hr {margin: 25px 15% 25px 15%}
 <li><a href="#section-uc">Use Cases</a>
 
 <ul>
+<li><a href="#section-family">Family</a></li>
 <li><a href="#section-today">Today</a></li>
 <li><a href="#section-medical">Medical</a></li>
-<li><a href="#section-rituals">Rituals</a></li>
-<li><a href="#section-of">OmniFocus</a></li>
+<li><a href="#section-house">House</a></li>
+<li><a href="#section-review">Review</a></li>
+<li><a href="#section-randq">Research And Questions</a></li>
 <li><a href="#section-rr">Repeating Reminders</a></li>
 <li><a href="#section-oos">Out of Scope</a></li>
 <li><a href="#section-comm">Communications</a></li>
@@ -457,11 +459,7 @@ blockquote + hr {margin: 25px 15% 25px 15%}
 </tr>
 <tr>
 	<td style="text-align:left;">Quick Access Timings</td>
-	<td style="text-align:left;">06:00</td>
-</tr>
-<tr>
-	<td style="text-align:left;"></td>
-	<td style="text-align:left;">11:30</td>
+	<td style="text-align:left;">20:00</td>
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
@@ -469,7 +467,11 @@ blockquote + hr {margin: 25px 15% 25px 15%}
 </tr>
 <tr>
 	<td style="text-align:left;"></td>
-	<td style="text-align:left;">19:0</td>
+	<td style="text-align:left;">11:30</td>
+</tr>
+<tr>
+	<td style="text-align:left;"></td>
+	<td style="text-align:left;">06:00</td>
 </tr>
 </tbody>
 </table>
@@ -480,88 +482,68 @@ blockquote + hr {margin: 25px 15% 25px 15%}
 
 <h2>Use Cases</h2>
 
+<h3>Family</h3>
+
+<ul>
+<li>My wife hasn&#8217;t replied to a text, so she is probably having a bad day. Walk up to the florist and get her some flowers.</li>
+<li>My boy has been rocking it with potty training. Walk up to the science shop and get him a new dinosaur.</li>
+</ul>
+
+<h4>Formatted: <code>👪 foo</code></h4>
+
 <h3>Today</h3>
 
 <ul>
-<li>Any tasks that come up and must be completed on the same day are always placed in Due.
+<li>Any tasks that come up and must be completed on the same day are always placed in Due.</li>
+</ul>
+
+<h4>Formatted: <code>🍩 foo</code></h4>
 
 <ul>
-<li>Formatted: <code>TODAY ☳ foo</code>.</li>
+<li>Day-old donuts are nasty.</li>
 <li>Usually set to one of my four quick times.</li>
-<li><a href="drafts://x-callback-url/import_action?type=URL&amp;name=%F0%9F%92%8A%20TODAY&amp;url=due%3A%2F%2Fx-callback-url%2Fadd%3Ftitle%3D%7B%7BTODAY%20%E2%98%B3%20%7D%7D%5B%5Bdraft%5D%5D">Install</a>.</li>
-</ul></li>
 </ul>
 
 <h3>Medical</h3>
 
 <ul>
-<li>I take a lot of pills, and Due helps remind me when I need to take them.
+<li>I take a lot of pills, and Due helps remind me when I need to take them.</li>
+</ul>
+
+<h4>Formatted: <code>🚑 foo</code></h4>
 
 <ul>
 <li>I use a distinct alarm for my pills.</li>
 <li>I set the snooze to one minute.</li>
-</ul></li>
 </ul>
 
-<h3>Rituals</h3>
+<h2>House</h2>
 
 <ul>
-<li>Some folks keep their morning / evening / weekly review checklist in OmniFocus.
-
-<ul>
-<li>This freaks me out.</li>
-</ul></li>
-<li>I have repeating events to trigger my ritual checklists.
-
-<ul>
-<li>I use a distinct alarm for my checklists.</li>
-<li>I set the snooze to one minute.</li>
-<li>If the checklist involves working at my computer, I add a URL to open the checklist on <a href="http://www.workflowy.com">Workflowy</a>.</li>
-<li>If the checklist involves work away from my computer, I add a URL to open the <a href="https://itunes.apple.com/us/app/paperless-lists-+-checklists/id359564368?mt=8">Paperless Lists iOS app</a>.</li>
-</ul></li>
+<li>Vacuum out the lint from from the dryer.</li>
+<li>Polishing floors.</li>
+<li>Air conditioner / Boiler / Water Heater Maintenance.</li>
 </ul>
 
-<h4>Some Checklists Involve Items That Create Additional Due Reminders:</h4>
+<h4>Formatted: <code>🏡 foo</code></h4>
+
+<h3>Review</h3>
 
 <ul>
-<li>I have morning and evening checklists for the house.
-
-<ul>
-<li>For this example, the interesting items on these checklists include a question mark.
-
-<ul>
-<li>These items contain a URL in the note field for quickly generating a Due &#8216;Today&#8217; type reminder.</li>
-</ul></li>
-<li>Items you&#8217;ll find on my checklists:
-
-<ul>
-<li>Do I need to do anything with the dishwasher?</li>
-<li>Do I need to do anything with the laundry?</li>
-<li>Do I need to buy milk?</li>
-<li>Do I need to make a pitcher of iced tea for my wife?</li>
-<li>Do I need to set the DVR for a hockey game?</li>
-</ul></li>
-</ul></li>
+<li>Mostly writing.</li>
 </ul>
-<!-- [Additional Reminders Screenshot](/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/Archive/seankorzdorferdotorg%20website/open_notebook.vpdoc/pages/9/90ede3dc-36e4-4669-9412-8548d3bc04c2  
-) -->
-<figure>
-<img class="frame" src="file://localhost/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/open_notebook/screens/screenshot-due-checklist.jpg" style="padding:5px; background:white; border:1px solid #ccc;" />
-<figcaption>Additional Reminders Screenshot</figcaption></figure>
 
-<h3>OmniFocus</h3>
+<h4>Formatted: <code>👓 foo</code></h4>
+
+<h3>Research and Questions</h3>
 
 <ul>
-<li>I have a few repeating reminders that will open OmniFocus perspectives:
-
-<ul>
-<li>Family - Set to open when my wife gets home from work.</li>
-<li>Morning Review.</li>
-<li>Evening Review.</li>
-<li>Weekly Review.</li>
-<li>Today.</li>
-</ul></li>
+<li>Notes.</li>
+<li>Problem solving.</li>
+<li>Toys / Books / Games for my boy.</li>
 </ul>
+
+<h4>Formatted: <code>🔬 foo</code></h4>
 
 <h3>Repeating Conditional Reminders</h3>
 
@@ -573,7 +555,7 @@ blockquote + hr {margin: 25px 15% 25px 15%}
 <li>Other people.</li>
 <li>Not being able to see the amount of deodorant I have left because the cheap sonsofbitches won&#8217;t put a window in the packaging.</li>
 </ul></li>
-<li>OmniFocus is terrible at handling these types of tasks.</li>
+<li>OmniFocus / Things / Name-A-Digital-Task-Manager are terrible at handling these types of tasks.</li>
 <li>Due is great for reminders where the the actual repeating interval is unknown.
 
 <ul>
@@ -582,43 +564,36 @@ blockquote + hr {margin: 25px 15% 25px 15%}
 <ul>
 <li>I usually set the intervals to one or two weeks (sometimes one month).</li>
 </ul></li>
-<li>Append a URL to the reminder that will create a new OmniFocus task or Due reminder.</li>
 </ul></li>
-<li>Formatted: <code>¿ foo?</code>.</li>
 </ul>
 <!-- ![Repeating Reminders Screenshot](/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/Archive/seankorzdorferdotorg%20website/open_notebook.vpdoc/pages/f/f7b01e64-d11c-4c47-9591-0a5382581103  
 ) -->
 <figure>
-<img src="//localhost/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/open_notebook/screens/screenshot_due_question.jpg" style="padding:5px; background:white; border:1px solid #ccc;" />
+<img src="http://d.pr/i/81zF+" style="padding:5px; background:white; border:1px solid #ccc;" />
 <figcaption>Repeating Reminders</figcaption></figure>
 
 <h3>Out of Scope</h3>
 
 <ul>
-<li>My OmniFocus Inbox used to be chock full of items that involved checking out an app, or reading an article.
+<li>GitHub repos, Unix commands, software, and other miscellaneous bits which might be interesting are formatted: <code>LOOK INTO ☲ foo</code>.</li>
+<li>Articles that I don&#8217;t <em>need</em> to read, or not associated with an already existing project are formatted: <code>READ ☲ foo</code>.</li>
+<li>Podcasts that I&#8217;m not subscribed to, but want to listen to are formatted: <code>LISTEN ☲ foo</code>.</li>
+</ul>
+
+<h4>Yes. This <em>is</em> Madness</h4>
 
 <ul>
-<li>It sucked.</li>
+<li>Using a defined format allows me to quickly search the different types of reminders. <strong>This is important</strong>.
+
+<ul>
+<li>By quickly adding them to Due, I can silence the voice(s) in the back of my head that won&#8217;t go away until I know I won&#8217;t forget about it later.</li>
 </ul></li>
-<li>I now add those items to Due: <a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a>
+<li>Later on that day, I perform a quick search and will notice way too many items.
 
 <ul>
-<li>Apps, articles and other miscellaneous bits which might be interesting are formatted: <code>LOOK INTO ☳ foo</code>.</li>
-<li>Articles that I don&#8217;t <em>need</em> to read, or not associated with an already existing project are formatted: <code>READ ※ foo</code>.</li>
-<li>Podcasts that I&#8217;m not subscribed to, but want to listen to are formatted: <code>LISTEN ※ foo</code>.</li>
-<li>Bits of the day that I want to remember to add to DayOne later in the evening are formatted: <code>LOG ☳ foo</code>.</li>
-</ul></li>
-<li>Using a defined format allows me to quickly search the different types of reminders. This is important.
-
-<ul>
-<li>By quickly adding them to Due, I can silence the voice in the back of my head that won&#8217;t go away until I know I won&#8217;t forget about it later.</li>
-<li>Later on that day, I perform a quick search and will probably notice way too many items.
-
-<ul>
-<li>This now triggers another voice in my head that is freaking the hell out.</li>
+<li>This now triggers another voice in my head that is freaking the Hell out.</li>
 <li>I usually trash most of the reminders I added. 30 seconds later: there are no voices screaming at me.</li>
 <li>Bonus: Due logs all completed tasks, so if I realize that I really do need to check out that $400.00 pencil sharpener, I haven&#8217;t lost anything.</li>
-</ul></li>
 </ul></li>
 </ul>
 
@@ -649,27 +624,35 @@ blockquote + hr {margin: 25px 15% 25px 15%}
 
 <ul>
 <li>Remind me to SMS or call important folks on their birthdays.</li>
-<li>You can use the URL scheme <code>Tel://xxx-xxx-xxxx</code><a href="#fn:3" id="fnref:3" title="see footnote" class="footnote">[3]</a> to launch the phone app.</li>
+<li>You can use the URL scheme <code>Tel://xxx-xxx-xxxx</code><a href="#fn:2" id="fnref:2" title="see footnote" class="footnote">[2]</a> to launch the phone app.</li>
 </ul></li>
 </ul>
 <!-- ![SMS Later](/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/Archive/seankorzdorferdotorg%20website/open_notebook.vpdoc/pages/3/329330a3-16fa-4136-832d-50c14bdeb6d8  
  ) -->
 <figure>
-<img src="//localhost/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/open_notebook/screens/screenshot-due-jake-looked-pretty.jpg" style="padding:5px; background:white; border:1px solid #ccc;" />
+<img src="http://d.pr/i/ZLUc+" style="padding:5px; background:white; border:1px solid #ccc;" />
 <figcaption>SMS Later</figcaption></figure>
 <!-- ![Reply to Tooter](/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/Archive/seankorzdorferdotorg%20website/open_notebook.vpdoc/pages/4/4e636181-3923-430e-a74a-aa175637e8b3  
  ) -->
 <figure>
-<img src="//localhost/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/open_notebook/screens/screenshot-due-finn-toot.jpg" style="padding:5px; background:white; border:1px solid #ccc;" />
+<img src="http://d.pr/i/nY87+" style="padding:5px; background:white; border:1px solid #ccc;" />
 <figcaption>Reply to Tooter</figcaption></figure>
 
 <h2>Random Tips</h2>
 
+<ul>
+<li><strong>Reminders are not required to have alarms.</strong></li>
+<li>Emoji are searchable.
+
+<ul>
+<li><a href="https://launchcenterpro.com/phzzzs">A Launch Center Pro Action to search the tokens listed above</a>.</li>
+</ul></li>
+</ul>
+
 <h3>Drafts Actions</h3>
 
 <ul>
-<li>Reminders are not required to have alarms.</li>
-<li>Drafts Action for Creating Sequential Tasks in Due<a href="#fn:4" id="fnref:4" title="see footnote" class="footnote">[4]</a>.</li>
+<li>Drafts Action for Creating Sequential Tasks in Due<a href="#fn:3" id="fnref:3" title="see footnote" class="footnote">[3]</a>.</li>
 <li>Drafts Action for Getting Me Out of the House on Time.</li>
 <li>Add Multiple Items to Due.
 
@@ -704,12 +687,12 @@ blockquote + hr {margin: 25px 15% 25px 15%}
 <!-- ![Calendar Event with URL](/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/Archive/seankorzdorferdotorg%20website/open_notebook.vpdoc/pages/5/5638ac8d-a27e-497a-8044-a59b72629f67  
 ) -->
 <figure>
-<img src="//localhost/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/open_notebook/screens/screenshot-due-calendar.jpg" style="padding:5px; background:white; border:1px solid #ccc;" />
+<img src="http://d.pr/i/k9fo+" style="padding:5px; background:white; border:1px solid #ccc;" />
 <figcaption>Calendar Event with URL</figcaption></figure>
 <!-- ![Repeating TaskPaper](/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/Archive/seankorzdorferdotorg%20website/open_notebook.vpdoc/pages/6/67208432-c93d-48c1-9ce4-322617c5e02c  
 ) -->
 <figure>
-<img src="//localhost/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/open_notebook/screens/screenshot-taskpaper.jpg" style="padding:5px; background:white; border:1px solid #ccc;" />
+<img src="http://d.pr/i/e01z+" style="padding:5px; background:white; border:1px solid #ccc;" />
 <figcaption>Repeating TaskPaper</figcaption></figure>
 
 <h3>Launch Center Pro</h3>
@@ -761,7 +744,7 @@ blockquote + hr {margin: 25px 15% 25px 15%}
 <h2>Scripts, Workflows and other Goodies</h2>
 
 <ul>
-<li><a href="https://github.com/ChewingPencils/alfred_workflows">Alfred 2 Due Workflow</a>.
+<li><a href="https://github.com/ChewingPencils/alfred_workflows">Alfred Due Tools Workflow</a>.
 
 <ul>
 <li>Add Calendar Events to Due.</li>
@@ -770,23 +753,7 @@ blockquote + hr {margin: 25px 15% 25px 15%}
 <li>Search Reminders.</li>
 <li>Search Timers.</li>
 <li>Search Log.</li>
-<li>OmniFocus2Due.</li>
 </ul></li>
-<li><a href="https://github.com/ChewingPencils/omnifocus2due_script">OmniFocus2Due</a></li>
-</ul>
-
-<hr />
-
-<p>Categories: Category_App, Category_Notes, Category_Workflow </p>
-
-<hr />
-
-<p>See Also: </p>
-
-<ul>
-<li>Drafts Action for Creating Sequential Tasks in Due.</li>
-<li>Launch Center Pro Action for Creating a Due Reminder Using secslater and TextExpander.</li>
-<li>Making Out With URLs–Drafts 3.0 and Launch Center Pro.</li>
 </ul>
 
 <div class="footnotes">
@@ -798,15 +765,11 @@ blockquote + hr {margin: 25px 15% 25px 15%}
 </li>
 
 <li id="fn:2">
-<p>Mostly through <a href="file://localhost/Volumes/MacintoshHD/skorzdorfer/Google%20Drive/Sean/Projects/open_notebook/due_bookmarklets.js">bookmarklets</a>  <a href="#fnref:2" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+<p>The dashes are optional <a href="#fnref:2" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
 </li>
 
 <li id="fn:3">
-<p>The dashes are optional <a href="#fnref:3" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
-</li>
-
-<li id="fn:4">
-<p>As far as I know, <a href="https://github.com/ChewingPencils/sequential_due_app_tasks/blob/master/sequential%20due%20app%20tasks.md">Using Launch Center Pro to Create Sequential Tasks for Due App</a> is the first documented use case that chains multiple registered URL schemes for iOS. <a href="#fnref:4" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
+<p>As far as I know, <a href="https://github.com/ChewingPencils/sequential_due_app_tasks/blob/master/sequential%20due%20app%20tasks.md">Using Launch Center Pro to Create Sequential Tasks for Due App</a> is the first documented use case that chains multiple registered URL schemes for iOS. <a href="#fnref:3" title="return to article" class="reversefootnote">&#160;&#8617;</a></p>
 </li>
 
 </ol>
